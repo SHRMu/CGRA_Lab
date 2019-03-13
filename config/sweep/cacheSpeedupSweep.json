@@ -1,0 +1,60 @@
+{
+"parameter" :
+    {
+
+        "benchmarkScale" : [5,12],
+        "COHERENCE_PROTOCOL"            : ["DRAGON", "MOESI"],
+        "PREFETCHING"    : ["UNROLL"]
+        "SW_COHERENCE_SUPPORT"        : [true],
+        "ALIASING_SPECULATION"     : ["OFF","PESSIMISTIC_CHECK"]
+    },
+"fu" :
+    {
+        "CGRA" : ["config/FU/CGRA/CGRA_165.json", "config/FU/CGRA/CGRA_165_2.json", "config/FU/CGRA/CGRA_165_3.json", "config/FU/CGRA/CGRA_16.json"],
+    }
+"application" :
+    [ 
+     "de/amidar/cacheBench/jpeg/Jpeg"
+
+     "de/amidar/cacheBench/adpcm/ADPCMencode",
+     "de/amidar/cacheBench/adpcm/ADPCMdecode",
+  
+     "de/amidar/cacheBench/crypto/AES",                 
+     "de/amidar/cacheBench/crypto/DES",
+     "de/amidar/cacheBench/crypto/Blowfish",
+     "de/amidar/cacheBench/crypto/IDEA",
+     "de/amidar/cacheBench/crypto/RC6",
+     "de/amidar/cacheBench/crypto/Serpent",
+     "de/amidar/cacheBench/crypto/Skipjack",
+     "de/amidar/cacheBench/crypto/Twofish",
+     "de/amidar/cacheBench/crypto/XTEA",
+  
+     "de/amidar/cacheBench/digests/BLAKE256",
+     "de/amidar/cacheBench/digests/CubeHash512",
+     "de/amidar/cacheBench/digests/ECOH256",
+     "de/amidar/cacheBench/digests/MD5",
+     "de/amidar/cacheBench/digests/RadioGatun32",
+     "de/amidar/cacheBench/digests/SHA1",
+     "de/amidar/cacheBench/digests/SHA256",
+     "de/amidar/cacheBench/digests/SIMD512",
+  
+     "de/amidar/cacheBench/filter/ContrastFilter",
+     "de/amidar/cacheBench/filter/GrayscaleFilter",
+     "de/amidar/cacheBench/filter/SobelFilter",
+     "de/amidar/cacheBench/filter/SwizzleFilter",
+  
+
+
+    ],
+"cache" :
+    {
+         "totalSizeCGRA" : [16],
+    },
+"l2cache" :
+    {
+        "virtual" : [ true],
+        "wordsPerLine" : [16]
+    }
+
+
+}

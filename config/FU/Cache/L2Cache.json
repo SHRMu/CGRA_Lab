@@ -1,0 +1,7 @@
+{
+	"name" : "L2Cache",
+	"size" : 256,
+	"ways" : 4,
+	"wordsperline" : 8,
+	"extMemoryAccTicks" : 38
+}

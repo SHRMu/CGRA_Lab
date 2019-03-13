@@ -1,0 +1,17 @@
+{
+	"SYNTHLOG" 				: false,
+	"UNROLL" 				: 4,
+	"MAX_UNROLL_LENGTH" 	: 3000,
+	"CSE"					: true,
+	"CONSTANT_FOLDING"		: true,	
+	"INLINE"				: true,
+	"SW_COHERENCE_SUPPORT"  : true,
+	"ALIASING_SPECULATION"	: "OFF",
+	"COHERENCE_PROTOCOL"	: "DRAGON",
+	"PREFETCHING"			: "UNROLL",
+	
+	"BLACKLIST"			: [
+		{"java/lang/String.equals(Ljava/lang/Object;)Z":75}
+		
+	]
+}
